@@ -1,3 +1,6 @@
+@use 'sass:math'
+
+	
 $vertical-distance: 30vh
 
 .container
@@ -31,7 +34,7 @@ $vertical-distance: 30vh
 		&.last
 			padding-bottom: $vertical-distance
 		&.img-container
-			padding-top: $vertical-distance / 2
+			padding-top: math.div($vertical-distance, 2)
 
 footer
 	width: 100%

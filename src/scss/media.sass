@@ -1,3 +1,5 @@
+@use 'sass:math'
+
 $vertical-distance-mob: 80px
 
 @media (max-width: 1605px)
@@ -244,7 +246,7 @@ $vertical-distance-mob: 80px
 			&.last
 				padding-bottom: $vertical-distance-mob
 			&.img-container
-				padding-top: $vertical-distance-mob / 2 
+				padding-top: math.div($vertical-distance-mob, 2)
 	.default-text
 		&.left
 			h2
@@ -259,7 +261,6 @@ $vertical-distance-mob: 80px
 	.logo
 		width: 26px
 	.slider-section
-		.container
 		.extra-text
 			margin-top: 7vh
 			text-align: center

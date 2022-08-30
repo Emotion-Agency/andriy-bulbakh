@@ -186,8 +186,39 @@ a
 .default-item
   &__content-wrapper
     width: 100%
-    display: flex
-    align-items: center
+    .filter
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      width: 100%
+      .filter-title
+        +roboto-med
+        font-size: 22px
+        line-height: 100%
+        letter-spacing: 0.1em
+        text-transform: uppercase
+        color: #000000
+      .filter-btns
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        margin-top: 52px
+        text-align: center
+        column-gap: 60px
+        row-gap: 10px
+        .filter-btn
+          +roboto
+          font-size: 40px
+          line-height: 100%
+          text-transform: uppercase
+          color: #C6C6C6
+          // margin-right: 60px
+          background-color: none
+          // &:last-of-type
+          //   margin-right: 0
+
     .img-list
       display: inline-block
       margin-top: 160px
@@ -212,6 +243,7 @@ a
         letter-spacing: 0.05em
         text-transform: uppercase
         color: $dark-color
+        padding-right: 15px
       .text-category
         font-size: 17px
         line-height: 100%

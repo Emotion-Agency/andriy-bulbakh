@@ -9,22 +9,20 @@ body
   color: $dark-light
   transition: opacity .5s ease
   overflow-x: hidden
-  overflow-y: scroll 
+  overflow-y: scroll
   background: $bg-color
   &.loading
     opacity: 0
 
-
 img
   display: block
   max-width: 100%
-.custom 
-  scrollbar-width: none 
-  -ms-overflow-style: none 
-  &::-webkit-scrollbar 
-    width: 0px 
-    background: transparent 
-
+.custom
+  scrollbar-width: none
+  -ms-overflow-style: none
+  &::-webkit-scrollbar
+    width: 0px
+    background: transparent
 
 .header
   height: 100vh
@@ -55,7 +53,7 @@ img
 
   &__text-content
     margin-bottom: 4vh
-    width: fit-content 
+    width: fit-content
   .descriptor
     margin-top: 15px
     line-height: 1em
@@ -76,8 +74,6 @@ img
     padding-top: 8vh
   &.services-header
     justify-content: center
-
-
 
 .img-wrapper
   position: relative
@@ -113,7 +109,7 @@ img
     pointer-events: none
     &.hovered
       opacity: 1
-        
+
 a
   &.img-wrapper
     &:hover
@@ -121,10 +117,9 @@ a
         opacity: 1
       + .service-name
         .stroke-a
-           svg
+          svg
             path
               stroke-dashoffset: 0px !important
-
 
 .header-img-shadow
   position: absolute
@@ -142,7 +137,6 @@ a
     left: auto
     right: 10.3vw
     bottom: 7%
-
 
 .service-item
   &__content-wrapper
@@ -174,7 +168,7 @@ a
     margin-right: 10px
     +roboto
   &:hover
-    ~ .service-item__content-wrapper 
+    ~ .service-item__content-wrapper
       opacity: 0.3
 
 .img-shadow
@@ -189,19 +183,40 @@ a
   &.left
     left: 1.15vw
 
-
 .default-item
   &__content-wrapper
     width: 100%
     display: flex
-    align-items: center 
-    &.reverse
-      flex-direction: row-reverse
+    align-items: center
+    .img-list
+      display: inline-block
+      margin-top: 160px
+      .img-li
+        display: inline-block
+        img
+          display: block
+          max-width: 100%
+          width: 100%
+        &:last-of-type
+          margin-bottom: 0
+    .text-wrapper
+      +roboto
+      display: flex
       justify-content: space-between
-    .img-wrapper
-      max-width: 50%
-      // img
-      // 	width: 100%
+      align-items: flex-start
+      width: 100%
+      margin-top: 22px
+      .text-name
+        font-size: 30px
+        line-height: 100%
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        color: $dark-color
+      .text-category
+        font-size: 17px
+        line-height: 100%
+        letter-spacing: 0.1em
+        color: #919191
 
 .default-text
   display: flex
@@ -219,7 +234,7 @@ a
   &.right
     margin-right: 3.6vw
     h2
-      left: 14vw 
+      left: 14vw
       width: 130%
       position: relative
       z-index: 10
@@ -227,7 +242,7 @@ a
   &.left
     margin-left: 11.8vw
     h2
-      left: -17vw 
+      left: -17vw
       width: 100%
       position: relative
       z-index: 10
@@ -245,7 +260,7 @@ a
     font-size: 35px
     color: $dark-light
     line-height: 1.7em
-    letter-spacing: 0.05em 
+    letter-spacing: 0.05em
     .word
       display: inline-block
       opacity: 0
@@ -313,9 +328,6 @@ a
   h2
     width: 50%
 
-
-  
-
 .header__about-img
   width: 37.6vw
   align-self: flex-end
@@ -325,21 +337,20 @@ a
   right: 0
   opacity: 0
 
-
-.portfolio 
+.portfolio
   margin-top: size(180, 80)
   margin-bottom: size(100, 60)
   width: 100%
   opacity: 0
-.portfolio__items 
-  margin-top: size(44, 32) 
-  width: 100% 
+.portfolio__items
+  margin-top: size(44, 32)
+  width: 100%
   display: grid
   grid-template-columns: repeat(3, 1fr)
   grid-gap: 28px
-  @media screen and (max-width: 768px) 
-    display: block 
-.portfolio__li 
+  @media screen and (max-width: 768px)
+    display: block
+.portfolio__li
   width: 100%
   cursor: pointer
   position: relative
@@ -355,14 +366,13 @@ a
     transition: opacity .4s ease
   @media screen and (max-width: 768px)
     + .portfolio__li
-      margin-top: size(44, 32) 
+      margin-top: size(44, 32)
   @media screen and (min-width: 960px)
     &:hover
       &::after
         opacity: 0.2
 
-
-.portfolio__li-img 
+.portfolio__li-img
   width: 100%
   height: 100%
   +cover
@@ -421,7 +431,6 @@ a
   overflow: hidden
   @media screen and (max-width: 460px)
     padding-bottom: 65%
-  
 
 .portfolio__slide
   width: 100%
@@ -464,3 +473,17 @@ a
   .portfolio__slider-icon
     float: right
     transform: rotate(-180deg)
+
+// ===================img-list===================
+
+// .thoughts-2__category
+//   @include snfine-reg-it
+//   font-size: vw(17)
+//   line-height: 100%
+//   letter-spacing: 1.7px
+//   color: #919191
+
+//   @media (max-width: $br1)
+//     letter-spacing: 0.1em
+//     font-size: 17px
+//     margin-top: 12px

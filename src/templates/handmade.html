@@ -8,7 +8,8 @@
       <span class="moc-text">Предмети декору — це завершаючий акорд інтер'єру вашої оселі.</span>
       <h1 class="services-h1">Декор</h1>
       <p class="services-descriptor">Створюємо дизайнерські елементи декорування, які доповнюють і підкреслюють стиль
-        інтер'єру. </p>
+        інтер'єру.
+      </p>
     </div>
   </div>
   <div class="services-header-imgs">
@@ -41,79 +42,99 @@
 <main>
   <section class="section default">
     <div class="default-item">
-      <div class="container">
+      <div class="container last">
         <div class="default-item__content-wrapper">
-          <div class="img-wrapper">
+          <ul class="img-list">
+            <li class="img-li">
+              <img src="{% if lang %}.{% endif %}./img/handmade/def-1.jpg" alt="handmade-1">
+              <div class="text-wrapper">
+                <p class="text-name">
+                  назва
+                </p>
+                <p class="text-category">
+                  Категорія
+                </p>
+              </div>
+            </li>
+            <li class="img-li">
+              <img src="{% if lang %}.{% endif %}./img/handmade/def-2.jpg" alt="handmade-2">
+              <div class="text-wrapper">
+                <p class="text-name">
+                  назва
+                </p>
+                <p class="text-category">
+                  Категорія
+                </p>
+              </div>
+            </li>
+            <li class="img-li">
+              <img src="{% if lang %}.{% endif %}./img/handmade/def-3.jpg" alt="handmade-3">
+              <div class="text-wrapper">
+                <p class="text-name">
+                  назва
+                </p>
+                <p class="text-category">
+                  Категорія
+                </p>
+              </div>
+            </li>
+            <li class="img-li">
+              <img src="{% if lang %}.{% endif %}./img/handmade/def-4.jpg" alt="handmade-4">
+              <div class="text-wrapper">
+                <p class="text-name">
+                  назва
+                </p>
+                <p class="text-category">
+                  Категорія
+                </p>
+              </div>
+            </li>
+            <li class="img-li">
+              <img src="{% if lang %}.{% endif %}./img/handmade/def-5.jpg" alt="handmade-5">
+              <div class="text-wrapper">
+                <p class="text-name">
+                  назва
+                </p>
+                <p class="text-category">
+                  Категорія
+                </p>
+              </div>
+            </li>
+            <li class="img-li">
+              <img src="{% if lang %}.{% endif %}./img/handmade/def-6.jpg" alt="handmade-6">
+              <div class="text-wrapper">
+                <p class="text-name">
+                  назва
+                </p>
+                <p class="text-category">
+                  Категорія
+                </p>
+              </div>
+            </li>
+            <li class="img-li">
+              <img src="{% if lang %}.{% endif %}./img/handmade/def-7.jpg" alt="handmade-7">
+              <div class="text-wrapper">
+                <p class="text-name">
+                  назва
+                </p>
+                <p class="text-category">
+                  Категорія
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- <div class="img-wrapper">
             <div class="img-rewealer left"></div>
             <img src="{% if lang %}.{% endif %}./img/handmade/def-1.jpg" alt="handmade-1">
           </div>
           <div class="default-text left">
             <h2 class="def-h2">{{ secondScreenH2 }}</h2>
             <p>{{ secondScreenText|safe }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="extra-text">
-    <div class="container second-line margin-top">
-      <p>{{ thirdScreenText }}</p>
-    </div>
-  </div>
-  <div class="section">
-    <div class="container center-container img-container">
-      <div class="img-wrapper">
-        <div class="img-rewealer left"></div>
-        <img src="{% if lang %}.{% endif %}./img/handmade/def-2.jpg" alt="handmade-2">
-      </div>
-    </div>
-  </div>
-  <section class="section default">
-    <div class="default-item">
-      <div class="container">
-        <div class="default-item__content-wrapper reverse">
-          <div class="img-wrapper">
-            <div class="img-rewealer right"></div>
-            <img src="{% if lang %}.{% endif %}./img/handmade/def-3.jpg" alt="handmade-3">
-          </div>
-          <div class="default-text right">
-            <h2 class="def-h2">{{ fourthScreenH2 }}</h2>
-            <p>{{ fourthScreenText }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section default">
-    <div class="default-item">
-      <div class="container">
-        <div class="default-item__content-wrapper">
-          <div class="img-wrapper">
-            <div class="img-rewealer left"></div>
-            <img src="{% if lang %}.{% endif %}./img/handmade/def-4.jpg" alt="handmade-4">
-          </div>
-          <div class="default-text left">
-            <h2 class="def-h2 big-width">{{ fivethScreenH2 }}</h2>
-            <p>{{ fivethScreenText }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section center-content">
-    <div class="container center-container second-line both">
-      <h2 class="def-h2">{{ sixthScreenH2 }}</h2>
-      <p>{{ sixthScreenText }}</p>
-    </div>
-  </section>
-  <section class="section slider-section">
-    <div class="container last">
-      {{mixins.slider(items.handmade)}}
-      <div class="extra-text">
-        <p>{{ sliderText }}</p>
-      </div>
-      <div class="slider-section__bg">
-        <div class="bg"></div>
+          </div> -->
+
       </div>
     </div>
   </section>

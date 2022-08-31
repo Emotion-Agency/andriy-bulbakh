@@ -91,10 +91,11 @@
           <input type="hidden" name="form_subject" value="Заявка с сайта Andriy Bulbakh">
           <!-- END Hidden Required Fields -->
           <div class="input-wrapper first">
-            <div class="input-wrapper">
+            <div class="distance input-wrapper">
               <input type="tel" class="text-field" maxlength="256" name="Телефон" id="phone" autocomplete="off">
               <label for="phone" class="label">
-                <span class="label-content">{% if lang %}введіть ваш телефон{% else %}enter your phone{% endif %}</span>
+                <span class="label-content product-header__form-text">{% if lang %}Ваш номер{% else %}Your
+                  phone{% endif %}</span>
               </label>
             </div>
           </div>
@@ -103,9 +104,9 @@
             <span class="koef-inp"></span>
             {% if lang %}символів. Залишилось:{% else %}characters. Left:{% endif %} <span
               class="koef-outp"></span></span>
-          <div class="stroke-a">
-            <input type="submit" value="{% if lang %}надіслати{% else %}send{% endif %}" class="form-button stroke-link"
-              data-size="10">
+          <div class="stroke-a product-header__btn-wrapper">
+            <input type="submit" value="{% if lang %}Замовити{% else %}send{% endif %}"
+              class="form-button stroke-link product-header__form-btn" data-size="10">
           </div>
           <div class="thank-you-window">
             <span>

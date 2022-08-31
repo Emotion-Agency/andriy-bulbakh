@@ -21,6 +21,7 @@ import CustomRendererServices from './pageRenders/CustomRenderServices'
 import CustomRendererAbout from './pageRenders/CustomRenderAbout'
 import CustomRendererContacts from './pageRenders/CustomRenderContacts'
 import CustomRendererPortfolio from './pageRenders/CustomRenderPortfolio'
+import CustomRendererProduct from './pageRenders/CustomRenderProduct'
 import Transition from './Transition'
 import SimpleTransition from './SimpleTransition'
 
@@ -55,7 +56,8 @@ const H = new Highway.Core({
     services: CustomRendererServices,
     about: CustomRendererAbout,
     contacts: CustomRendererContacts,
-    portfolio: CustomRendererPortfolio
+    portfolio: CustomRendererPortfolio,
+    product: CustomRendererProduct
   },
   transitions: {
     default: Transition,

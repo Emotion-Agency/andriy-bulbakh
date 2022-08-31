@@ -1,0 +1,244 @@
+{% set 'route' = 'product' %}
+{% set 'lang' = 'uk' %}
+{% extends "layouts/_layout.html" %}
+{% block content %}
+<header class="header product-header">
+  <div class="container product-header__wrapper">
+    <div class="product-header__left-block">
+      <ul class="product-header__small-imgs">
+        <li class="product-header__li">
+          <img src="{% if lang %}.{% endif %}./img/product/header-1.jpg" alt="product-1">
+        </li>
+        <li class="product-header__li">
+          <img src="{% if lang %}.{% endif %}./img/product/header-2.jpg" alt="product-2">
+        </li>
+        <li class="product-header__li">
+          <img src="{% if lang %}.{% endif %}./img/product/header-3.jpg" alt="product-3">
+        </li>
+        <li class="product-header__li">
+          <img src="{% if lang %}.{% endif %}./img/product/header-4.jpg" alt="product-4">
+        </li>
+      </ul>
+      <div class="product-header__main-wrapper">
+        <div class="product-header__main-img">
+          <img src="{% if lang %}.{% endif %}./img/product/header-main.jpg" alt="product-main">
+        </div>
+        <div class="product-header__btns">
+          <button class="left-arrow product-header__btn">
+            <span>
+              <svg width="94" height="16" viewBox="0 0 94 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.292892 8.7071C-0.0976334 8.31657 -0.0976333 7.68341 0.292893 7.29289L6.65685 0.928925C7.04738 0.5384 7.68054 0.5384 8.07107 0.928925C8.46159 1.31945 8.46159 1.95261 8.07107 2.34314L2.41422 7.99999L8.07107 13.6568C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.7071ZM94 9L1 8.99999L1 6.99999L94 7L94 9Z"
+                  fill="#292B33" fill-opacity="0.7" />
+              </svg>
+            </span>
+          </button>
+          <button class="right-arrow product-header__btn">
+            <span>
+              <svg width="94" height="16" viewBox="0 0 94 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M93.7071 8.7071C94.0976 8.31657 94.0976 7.68341 93.7071 7.29289L87.3431 0.928925C86.9526 0.5384 86.3195 0.5384 85.9289 0.928925C85.5384 1.31945 85.5384 1.95261 85.9289 2.34314L91.5858 7.99999L85.9289 13.6568C85.5384 14.0474 85.5384 14.6805 85.9289 15.0711C86.3195 15.4616 86.9526 15.4616 87.3431 15.0711L93.7071 8.7071ZM8.74228e-08 9L93 8.99999L93 6.99999L-8.74228e-08 7L8.74228e-08 9Z"
+                  fill="#292B33" fill-opacity="0.7" />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="product-header__right-block">
+      <h1 class="product-header__title">
+        Хідник вовняний
+      </h1>
+      <p class="product-header__category">
+        Хідники
+      </p>
+      <p class="product-header__desc">
+        Хідник зі справжньої овечої вовни, витканий за традиційною технікою у гуцульському селі.
+        </br></br>
+        У виробі використані три натуральні кольори – чорний, білий і сірий.
+        </br></br>
+        Виготовлено вручну!
+      </p>
+      <p class="product-header__material">
+        Матеріал:
+      </p>
+      <p class="product-header__material-name">
+        овеча вовна
+      </p>
+      <p class="product-header__size">
+        Розміри:
+      </p>
+      <p class="product-header__size-info">
+        1,4 м х 2 м
+      </p>
+      <p class="product-header__price">
+        Ціна: <span class="product-header__colored-price">
+          10250 грн.
+        </span>
+      </p>
+      <p class="product-header__phone">
+        Телефонуйте:
+        <a class="stroke-link" href="tel:+380678186954">+38 (067) 818 6954</a>
+      </p>
+      <div class="product-header__form-wrapper">
+        <legend class="product-header__form-title">
+          Або залиште свій номер і ми вам зателефонуємо:
+        </legend>
+        <form data-url="{% if lang %}.{% endif %}./mail.php" class="form" name="form">
+          <!-- Hidden Required Fields -->
+          <input type="hidden" name="project_name" value="Andriy Bulbakh site">
+          <input type="hidden" name="admin_email" value="hello@emotion-agency.com">
+          <input type="hidden" name="form_subject" value="Заявка с сайта Andriy Bulbakh">
+          <!-- END Hidden Required Fields -->
+          <div class="input-wrapper first">
+            <div class="input-wrapper">
+              <input type="tel" class="text-field" maxlength="256" name="Телефон" id="phone" autocomplete="off">
+              <label for="phone" class="label">
+                <span class="label-content">{% if lang %}введіть ваш телефон{% else %}enter your phone{% endif %}</span>
+              </label>
+            </div>
+          </div>
+          <span data-value="5" class="form-validate-text">
+            {% if lang %}мінімум{% else %}phone must be at least{% endif %}
+            <span class="koef-inp"></span>
+            {% if lang %}символів. Залишилось:{% else %}characters. Left:{% endif %} <span
+              class="koef-outp"></span></span>
+          <div class="stroke-a">
+            <input type="submit" value="{% if lang %}надіслати{% else %}send{% endif %}" class="form-button stroke-link"
+              data-size="10">
+          </div>
+          <div class="thank-you-window">
+            <span>
+              {% if lang %}Дякуємо, ваша заявка була успішно відправлена{% else %}Thank you, your message has been sent
+              successfully.{% endif %}
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <!-- <section class="section default">
+    <div class="default-item">
+      <div class="container last"> -->
+  <!-- <div class="default-item__content-wrapper">
+          <div class="filter">
+            <p class="filter-title">
+              Категорії
+            </p>
+            <div class="filter-btns">
+              <button class="filter-btn">
+                меблі
+              </button>
+              <button class="filter-btn">
+                Хідники
+              </button>
+              <button class="filter-btn">
+                декор
+              </button>
+              <button class="filter-btn">
+                Всі
+              </button>
+            </div>
+          </div>
+          <ul class="img-list">
+            <li class="img-li">
+              <a class="stroke-link" href="inner.html">
+                <img src="{% if lang %}.{% endif %}./img/handmade/def-1.jpg" alt="handmade-1">
+                <div class="text-wrapper">
+                  <p class="text-name">
+                    назва
+                  </p>
+                  <p class="text-category">
+                    Категорія
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="img-li">
+              <a class="stroke-link" href="inner.html">
+                <img src="{% if lang %}.{% endif %}./img/handmade/def-2.jpg" alt="handmade-2">
+                <div class="text-wrapper">
+                  <p class="text-name">
+                    назва
+                  </p>
+                  <p class="text-category">
+                    Категорія
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="img-li">
+              <a class="stroke-link" href="inner.html">
+                <img src="{% if lang %}.{% endif %}./img/handmade/def-3.jpg" alt="handmade-3">
+                <div class="text-wrapper">
+                  <p class="text-name">
+                    назва
+                  </p>
+                  <p class="text-category">
+                    Категорія
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="img-li">
+              <a class="stroke-link" href="inner.html">
+                <img src="{% if lang %}.{% endif %}./img/handmade/def-4.jpg" alt="handmade-4">
+                <div class="text-wrapper">
+                  <p class="text-name">
+                    назва
+                  </p>
+                  <p class="text-category">
+                    Категорія
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="img-li">
+              <a class="stroke-link" href="inner.html">
+                <img src="{% if lang %}.{% endif %}./img/handmade/def-5.jpg" alt="handmade-5">
+                <div class="text-wrapper">
+                  <p class="text-name">
+                    назва
+                  </p>
+                  <p class="text-category">
+                    Категорія
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="img-li">
+              <a class="stroke-link" href="inner.html">
+                <img src="{% if lang %}.{% endif %}./img/handmade/def-6.jpg" alt="handmade-6">
+                <div class="text-wrapper">
+                  <p class="text-name">
+                    назва
+                  </p>
+                  <p class="text-category">
+                    Категорія
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="img-li">
+              <a class="stroke-link" href="inner.html">
+                <img src="{% if lang %}.{% endif %}./img/handmade/def-7.jpg" alt="handmade-7">
+                <div class="text-wrapper">
+                  <p class="text-name">
+                    назва
+                  </p>
+                  <p class="text-category">
+                    Категорія
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div> -->
+  <!-- </div>
+    </div>
+  </section> -->
+</main>
+{% include "partials/_footer.html" %}
+{% endblock %}

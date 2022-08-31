@@ -502,3 +502,90 @@ a
   .portfolio__slider-icon
     float: right
     transform: rotate(-180deg)
+
+//======== product page ========
+
+.product-header
+  height: 100%
+  .container
+    padding-top: 200px
+    padding-bottom: 160px
+  &__wrapper
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    column-gap: 20px
+    grid-auto-flow: column
+    width: 100%
+    .product-header__left-block
+      +col(1, 6)
+      display: flex
+      align-items: flex-start
+      column-gap: 23px
+      .product-header__small-imgs
+        display: flex
+        flex-direction: column
+        row-gap: 20px
+      .product-header__main-wrapper
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        justify-content: center
+        row-gap: 24px
+        .product-header__btns
+          display: flex
+          column-gap: 40px
+          svg
+            display: block
+    .product-header__right-block
+      +col(8, 12)
+      .product-header__title
+        +roboto
+        font-size: 72px
+        line-height: 130%
+        text-transform: uppercase
+        color: $dark-color
+      .product-header__category
+        +roboto
+        font-size: 17px
+        line-height: 100%
+        letter-spacing: 0.1em
+        color: #919191
+        margin-top: 12px
+      .product-header__desc
+        +main
+        font-size: 20px
+        line-height: 160%
+        color: #54555C
+        margin-top: 40px
+      .product-header__material
+        +roboto
+        font-size: 24px
+        line-height: 150%
+        color: $dark-color
+        margin-top: 36px
+      .product-header__material-name
+        +main
+        font-size: 20px
+        line-height: 150%
+        color: $dark-color
+        margin-top: 8px
+      .product-header__size
+        +roboto
+        font-size: 24px
+        line-height: 150%
+        color: $dark-color
+        margin-top: 36px
+      .product-header__size-info
+        +main
+        font-size: 20px
+        line-height: 150%
+        color: $dark-color
+        margin-top: 8px
+      .product-header__price
+        +main
+        font-size: 40px
+        line-height: 100%
+        color: $dark-color
+        margin-top: 36px
+        span
+          color: #EB5757

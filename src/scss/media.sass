@@ -2,6 +2,13 @@
 
 $vertical-distance-mob: 80px
 
+@media (min-width: 1150px)
+	.product-1
+		&__text-wrapper
+			.container
+				p
+					max-width: 688px
+
 @media (min-width: 960px)
 	.default-item__content-wrapper
 		.img-li
@@ -97,6 +104,68 @@ $vertical-distance-mob: 80px
 	.services-header__text-content .services-descriptor
 		left: 15.2vw
 		max-width: 357px
+	.product-header
+		&__wrapper
+			grid-template-columns: repeat(4, 1fr)
+			row-gap: 25px
+		.container
+			padding-top: 120px
+			.product-header__left-block
+				+col(1, 4)
+				width: 100%
+				.product-header__small-imgs
+					display: none
+				.product-header__main-wrapper
+					width: 100%
+					.product-header__main-img
+						width: 100%
+						img
+							width: 100%
+					.product-header__btns
+						justify-content: space-between
+						width: 100%
+						.product-header__btn
+							width: 60px
+							svg
+								width: 100%
+			.product-header__right-block
+				+col(1, 4)
+				+row(2, 2)
+				.product-header__title
+					font-size: 40px
+				.product-header__category
+					font-size: 14px
+					margin-top: 10px
+				.product-header__desc
+					font-size: 16px
+					margin-top: 25px
+				.product-header__material
+					font-size: 18px
+					margin-top: 18px
+				.product-header__material-name
+					font-size: 16px
+					margin-top: 6px
+				.product-header__size
+					font-size: 18px
+					margin-top: 18px
+				.product-header__size-info
+					font-size: 16px
+					margin-top: 6px
+				.product-header__price
+					font-size: 28px
+					margin-top: 18px
+				.product-header__phone
+					font-size: 20px
+					margin-top: 30px
+				.product-header__form-wrapper
+					margin-top: 30px
+					.distance
+						margin-top: 18px
+						.product-header__form-text
+							font-size: 18px
+					.product-header__btn-wrapper
+						.product-header__form-btn
+							font-size: 16px
 
 @media (max-width: 960px)
 	.default-item__content-wrapper

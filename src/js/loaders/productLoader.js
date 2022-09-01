@@ -6,7 +6,7 @@ import {
 
 const productLoader = () => {
   const h1 = document.querySelector('h1')
-  const content = document.querySelector('.product')
+  const content = document.querySelector('.product-header')
   splitting({
     target: h1,
     by: 'chars'

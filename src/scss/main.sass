@@ -208,13 +208,39 @@ a
         text-align: center
         column-gap: 60px
         row-gap: 10px
+        position: relative
         .filter-btn
           +roboto
+          position: relative
           font-size: 40px
           line-height: 100%
           text-transform: uppercase
-          color: #C6C6C6
-          background-color: none
+          color: $dark-color
+          opacity: 0.4
+          background-color: transparent
+        .stroke-a
+          position: relative
+          button
+            position: relative
+            &::after
+              content: ''
+              position: absolute
+              bottom: -5px
+              left: auto
+              right: 0
+              display: block
+              width: 0
+              height: 2px
+              background: $dark-color
+              transition: width .5s ease
+            &.active
+              opacity: 1
+          &:hover
+            button
+              &::after
+                left: 0
+                right: auto
+                width: 100%
 
     .img-list
       display: inline-block

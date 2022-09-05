@@ -241,7 +241,6 @@ a
                 left: 0
                 right: auto
                 width: 100%
-
     .img-list
       display: inline-block
       margin-top: 160px
@@ -550,6 +549,14 @@ a
         display: flex
         flex-direction: column
         row-gap: 20px
+        .product-header__li
+          opacity: 0.4
+          cursor: pointer
+          transition: opacity 0.3s ease
+          &:hover
+            opacity: 1
+          img
+            display: block
       .product-header__main-wrapper
         display: flex
         flex-direction: column

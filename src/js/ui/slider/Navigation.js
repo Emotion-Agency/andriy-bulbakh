@@ -6,7 +6,7 @@ export default class Navigation {
     this.$el = $el
     this.opts = opts
 
-    this.$parent = this.$el.closest('.portfolio__slider-pop-up')
+    this.$parent = this.$el.closest('[data-slider]')
 
     this.nav = {
       $left: this.$parent.querySelector('[data-nav="prev"]'),

@@ -19,30 +19,35 @@
           <img src="{% if lang %}.{% endif %}./img/product/header-4.jpg" alt="product-4">
         </li>
       </ul>
-      <div class="product-header__main-wrapper">
-        <div class="product-header__main-img">
-          <img src="{% if lang %}.{% endif %}./img/product/header-main.jpg" alt="product-main">
+      <div class="product__slider" data-slider>
+        <div class="product__slider-wrapper">
+          <div class="product__slides">
+            {% for i in range(0, 4) -%}
+            <div data-slide class="product__slide">
+              <div data-slide-img class="product__slide-img"
+                style="background-image:url('./img/product/slider/{{i+1}}.jpg')"></div>
+            </div>
+            {% endfor %}
+          </div>
         </div>
-        <div class="product-header__btns">
-          <button class="left-arrow product-header__btn">
-            <span>
-              <svg width="94" height="16" viewBox="0 0 94 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M0.292892 8.7071C-0.0976334 8.31657 -0.0976333 7.68341 0.292893 7.29289L6.65685 0.928925C7.04738 0.5384 7.68054 0.5384 8.07107 0.928925C8.46159 1.31945 8.46159 1.95261 8.07107 2.34314L2.41422 7.99999L8.07107 13.6568C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.7071ZM94 9L1 8.99999L1 6.99999L94 7L94 9Z"
-                  fill="#292B33" fill-opacity="0.7" />
-              </svg>
-            </span>
-          </button>
-          <button class="right-arrow product-header__btn">
-            <span>
-              <svg width="94" height="16" viewBox="0 0 94 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M93.7071 8.7071C94.0976 8.31657 94.0976 7.68341 93.7071 7.29289L87.3431 0.928925C86.9526 0.5384 86.3195 0.5384 85.9289 0.928925C85.5384 1.31945 85.5384 1.95261 85.9289 2.34314L91.5858 7.99999L85.9289 13.6568C85.5384 14.0474 85.5384 14.6805 85.9289 15.0711C86.3195 15.4616 86.9526 15.4616 87.3431 15.0711L93.7071 8.7071ZM8.74228e-08 9L93 8.99999L93 6.99999L-8.74228e-08 7L8.74228e-08 9Z"
-                  fill="#292B33" fill-opacity="0.7" />
-              </svg>
-            </span>
-          </button>
-        </div>
+        <nav class="product__slider-nav">
+          <div data-nav="prev" class="product__slider-nav-item product__slider-nav-item--prev">
+            <svg class="product__slider-icon" width="94" height="16" viewBox="0 0 94 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0.292892 8.7071C-0.0976334 8.31657 -0.0976333 7.68341 0.292893 7.29289L6.65685 0.928925C7.04738 0.5384 7.68054 0.5384 8.07107 0.928925C8.46159 1.31945 8.46159 1.95261 8.07107 2.34314L2.41422 7.99999L8.07107 13.6568C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.7071ZM94 9L1 8.99999L1 6.99999L94 7L94 9Z"
+                fill="#292B33" fill-opacity="0.7" />
+            </svg>
+          </div>
+          <div data-nav="next" class="product__slider-nav-item product__slider-nav-item--next">
+            <svg class="product__slider-icon" width="94" height="16" viewBox="0 0 94 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M93.7071 8.7071C94.0976 8.31657 94.0976 7.68341 93.7071 7.29289L87.3431 0.928925C86.9526 0.5384 86.3195 0.5384 85.9289 0.928925C85.5384 1.31945 85.5384 1.95261 85.9289 2.34314L91.5858 7.99999L85.9289 13.6568C85.5384 14.0474 85.5384 14.6805 85.9289 15.0711C86.3195 15.4616 86.9526 15.4616 87.3431 15.0711L93.7071 8.7071ZM8.74228e-08 9L93 8.99999L93 6.99999L-8.74228e-08 7L8.74228e-08 9Z"
+                fill="#292B33" fill-opacity="0.7" />
+            </svg>
+          </div>
+        </nav>
       </div>
     </div>
     <div class="product-header__right-block">

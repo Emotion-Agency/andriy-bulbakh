@@ -5,13 +5,23 @@ export const filter = (elem) => {
   function onClick(event) {
     const currentFilterName = event.currentTarget.dataset.filter.toLowerCase()
 
-    items.forEach((el) => {
+    items.forEach((el, idx) => {
       const filterName = el.dataset.category.toLowerCase()
 
-      el.classList.remove('show')
+      el.classList.remove('show', 'show--left', 'show--right')
 
       if (currentFilterName === 'всі' || currentFilterName === filterName) {
         el.classList.add('show')
+      }
+    })
+
+    const activeItems = document.querySelectorAll('.img-li.show')
+
+    activeItems.forEach((el, idx) => {
+      if ((idx + 1) % 2 === 0) {
+        el.classList.add('show--right')
+      } else {
+        el.classList.add('show--left')
       }
     })
 

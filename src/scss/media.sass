@@ -12,15 +12,14 @@ $vertical-distance-mob: 80px
 @media (min-width: 960px)
 	.default-item__content-wrapper
 		.img-li
-			margin-bottom: 170px
+			margin-top: 160px
 			width: 42%
-			&.show
-				&:nth-of-type(odd)
-					float: left
-					clear: left
-				&:nth-of-type(even)
-					float: right
-					clear: right
+			&.show--left
+				float: left
+				clear: left
+			&.show--right
+				float: right
+				clear: right
 
 @media (max-width: 1605px)
 	body
@@ -181,11 +180,9 @@ $vertical-distance-mob: 80px
 				column-gap: 30px
 				.filter-btn
 					font-size: 22px
-		.img-list
-			margin-top: 120px
-			.img-li
-				margin-bottom: 40px
-				width: 100%
+		.img-li
+			margin-top: 60px
+			width: 100%
 		.text-wrapper
 			margin-top: 20px
 			.text-name

@@ -192,13 +192,17 @@ a
       align-items: center
       flex-direction: column
       width: 100%
-      .filter-title
+      .def-h2
         +roboto-med
         font-size: 22px
         line-height: 100%
         letter-spacing: 0.1em
         text-transform: uppercase
         color: #000000
+        .word
+          display: inline-block
+          transform: translateY(50px)
+          opacity: 0
       .filter-btns
         display: flex
         justify-content: center
@@ -207,7 +211,7 @@ a
         margin-top: 52px
         text-align: center
         column-gap: 60px
-        row-gap: 10px
+        row-gap: 20px
         position: relative
         .filter-btn
           +roboto
@@ -275,11 +279,13 @@ a
         text-transform: uppercase
         color: $dark-color
         padding-right: 15px
+        width: fit-content
       .text-category
         font-size: 17px
         line-height: 100%
         letter-spacing: 0.1em
         color: #919191
+        width: fit-content
 
 .default-text
   display: flex
@@ -574,6 +580,11 @@ a
         line-height: 130%
         text-transform: uppercase
         color: $dark-color
+      .extra-text
+        p
+          width: 100%
+          margin-left: 0
+          margin-right: 0
       .product-header__category
         +roboto
         font-size: 17px

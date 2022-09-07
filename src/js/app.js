@@ -1,6 +1,10 @@
 import Highway from '@dogstudio/highway'
 
-import {textSplit, navLinksDetect, langCurrentPage} from './helperFuncs.js'
+import {
+  textSplit,
+  navLinksDetect,
+  langCurrentPage
+} from './helperFuncs.js'
 
 import Nav from './ui/nav/nav.js'
 import FormSubmit from './form/FormSubmit.js'
@@ -44,6 +48,7 @@ window.addEventListener('load', () => {
   textSplit(document.querySelectorAll('.extra-text p'), 'words')
   textSplit(document.querySelectorAll('.def-h2'), 'words')
   navLinksDetect()
+  textSplit(document.querySelectorAll('.extra-text button'), 'words')
 
   langCurrentPage()
 
@@ -85,7 +90,6 @@ H.on('NAVIGATE_END', () => {
 
   textSplit(document.querySelectorAll('.extra-text p'), 'words')
   textSplit(document.querySelectorAll('.def-h2'), 'words')
+  textSplit(document.querySelectorAll('.extra-text button'), 'words')
 
 })
-
-

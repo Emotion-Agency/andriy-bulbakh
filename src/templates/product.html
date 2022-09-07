@@ -54,37 +54,39 @@
       <h1 class="product-header__title">
         Хідник вовняний
       </h1>
-      <p class="product-header__category">
-        Хідники
-      </p>
-      <p class="product-header__desc">
-        Хідник зі справжньої овечої вовни, витканий за традиційною технікою у гуцульському селі.
-        </br></br>
-        У виробі використані три натуральні кольори – чорний, білий і сірий.
-        </br></br>
-        Виготовлено вручну!
-      </p>
-      <p class="product-header__material">
-        Матеріал:
-      </p>
-      <p class="product-header__material-name">
-        овеча вовна
-      </p>
-      <p class="product-header__size">
-        Розміри:
-      </p>
-      <p class="product-header__size-info">
-        1,4 м х 2 м
-      </p>
-      <p class="product-header__price">
-        Ціна: <span class="product-header__colored-price">
-          10250 грн.
-        </span>
-      </p>
-      <p class="product-header__phone">
-        Телефонуйте:
-        <a class="stroke-link" href="tel:+380678186954">+38 (067) 818 6954</a>
-      </p>
+      <div class="extra-text product-header__text-wrapper">
+        <p class="product-header__category">
+          Хідники
+        </p>
+        <p class="product-header__desc">
+          Хідник зі справжньої овечої вовни, витканий за традиційною технікою у гуцульському селі.
+          </br></br>
+          У виробі використані три натуральні кольори – чорний, білий і сірий.
+          </br></br>
+          Виготовлено вручну!
+        </p>
+        <p class="product-header__material">
+          Матеріал:
+        </p>
+        <p class="product-header__material-name">
+          овеча вовна
+        </p>
+        <p class="product-header__size">
+          Розміри:
+        </p>
+        <p class="product-header__size-info">
+          1,4 м х 2 м
+        </p>
+        <p class="product-header__price">
+          Ціна: <span class="product-header__colored-price">
+            10250 грн.
+          </span>
+        </p>
+        <p class="product-header__phone">
+          Телефонуйте:
+          <a class="stroke-link" href="tel:+380678186954">+38 (067) 818 6954</a>
+        </p>
+      </div>
       <div class="product-header__form-wrapper">
         <legend class="product-header__form-title">
           Або залиште свій номер і ми вам зателефонуємо:
@@ -137,11 +139,26 @@
   </section>
   <section class="section product-2">
     <div class="container last product-2__img-wrapper">
-      <img src="{% if lang %}.{% endif %}./img/product/product-1.jpg" alt="product-1">
-      <img src="{% if lang %}.{% endif %}./img/product/product-2.jpg" alt="product-2">
-      <img src="{% if lang %}.{% endif %}./img/product/product-3.jpg" alt="product-3">
-      <img src="{% if lang %}.{% endif %}./img/product/product-4.jpg" alt="product-4">
-      <img src="{% if lang %}.{% endif %}./img/product/product-5.jpg" alt="product-5">
+      <div class="img-wrapper">
+        <div class="img-rewealer left"></div>
+        <img src="{% if lang %}.{% endif %}./img/product/product-1.jpg" alt="product-1">
+      </div>
+      <div class="img-wrapper">
+        <div class="img-rewealer left"></div>
+        <img src="{% if lang %}.{% endif %}./img/product/product-2.jpg" alt="product-2">
+      </div>
+      <div class="img-wrapper">
+        <div class="img-rewealer left"></div>
+        <img src="{% if lang %}.{% endif %}./img/product/product-3.jpg" alt="product-3">
+      </div>
+      <div class="img-wrapper">
+        <div class="img-rewealer left"></div>
+        <img src="{% if lang %}.{% endif %}./img/product/product-4.jpg" alt="product-4">
+      </div>
+      <div class="img-wrapper">
+        <div class="img-rewealer left"></div>
+        <img src="{% if lang %}.{% endif %}./img/product/product-5.jpg" alt="product-5">
+      </div>
     </div>
   </section>
 </main>

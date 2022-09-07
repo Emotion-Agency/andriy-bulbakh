@@ -1,8 +1,16 @@
+export const delayPromise = (time = 0) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve()
+    }, time)
+  })
+}
+
 export const filter = (elem) => {
   const items = document.querySelectorAll('.img-li')
   const filterBtns = document.querySelectorAll('.filter-btn')
 
-  function onClick(event) {
+  const onClick = (event) => {
     const currentFilterName = event.currentTarget.dataset.filter.toLowerCase()
 
     items.forEach((el, idx) => {

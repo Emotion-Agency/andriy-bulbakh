@@ -3,20 +3,25 @@ export const filter = (elem) => {
   const filterBtns = document.querySelectorAll('.filter-btn')
 
   function onClick(event) {
-    const btnText = event.currentTarget.innerText.toLowerCase()
+    const currentFilterName = event.currentTarget.dataset.filter.toLowerCase()
 
     items.forEach((el) => {
       const filterName = el.dataset.category.toLowerCase()
 
-      el.classList.add('show')
+      el.classList.remove('show')
 
-      if (btnText === 'всі') {
+      if (currentFilterName === 'всі' || currentFilterName === filterName) {
         el.classList.add('show')
-        return
       }
+    })
 
-      if (btnText !== filterName) {
-        el.classList.remove('show')
+    filterBtns.forEach((el) => {
+      const filterName = el.dataset.filter.toLowerCase()
+
+      el.classList.remove('active')
+
+      if (currentFilterName === filterName) {
+        el.classList.add('active')
       }
     })
   }
@@ -24,4 +29,6 @@ export const filter = (elem) => {
   filterBtns.forEach((filterBtn) => {
     filterBtn.addEventListener('click', onClick)
   })
+
+  filterBtns[filterBtns.length - 1].click()
 }

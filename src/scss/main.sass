@@ -222,6 +222,7 @@ a
           position: relative
           button
             position: relative
+            transition: all 0.3s ease
             &::after
               content: ''
               position: absolute
@@ -235,6 +236,10 @@ a
               transition: width .5s ease
             &.active
               opacity: 1
+              &::after
+                left: 0
+                right: auto
+                width: 100%
           &:hover
             button
               &::after
@@ -243,9 +248,9 @@ a
                 width: 100%
     .img-list
       display: inline-block
-      clear: both
-      width: 100%
       margin-top: 160px
+      width: 100%
+      clear: both
       .img-li
         display: none
       .show

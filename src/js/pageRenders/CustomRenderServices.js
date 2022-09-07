@@ -18,9 +18,6 @@ class CustomRendererServices extends Highway.Renderer {
       if (document.querySelector('.slideshow')) {
         new Slideshow(document.querySelector('.slideshow'))
       }
-      if (document.querySelector('.filter')) {
-        filter(document.querySelector('.filter'))
-      }
     })
 
     if (document.querySelector('.loader').style.opacity === '0') {
@@ -29,6 +26,9 @@ class CustomRendererServices extends Highway.Renderer {
         new Slideshow(document.querySelector('.slideshow'))
       }
       servicesLoader(parallaxScroller.bind(null, '.header-image'))
+    }
+    if (document.querySelector('.filter')) {
+      filter(document.querySelector('.filter'))
     }
   }
 }

@@ -9,8 +9,7 @@ const handmadeLoader = (calback) => {
   const descriptor = document.querySelector('.services-descriptor')
   const moc = document.querySelector('.moc-text')
   const h1 = document.querySelector('h1')
-  const h2 = document.querySelector('h2')
-  const button = document.querySelectorAll('.filter-btn')
+  const filter = document.querySelectorAll('.filter')
   const text = document.querySelectorAll('.text-wrapper')
 
   splitting({target: h1, by: 'chars'})
@@ -28,8 +27,7 @@ const handmadeLoader = (calback) => {
       0,
     )
     .to(img, 1.3, {scale: 1, ease: Power1.easeInOut}, 0.2)
-    .to(h2, 0.6, {opacity: 1, onComplete: calback}, 0.8)
-    .to(button, 0.6, {opacity: 1, onComplete: calback}, 0.8)
+    .to(filter, 0.6, {opacity: 1, onComplete: calback}, 0.8)
     .to(text, 0.6, {opacity: 1, onComplete: calback}, 0.8)
     .to(h1, 0.6, {opacity: 1, onComplete: calback}, 0.8)
     .staggerTo(

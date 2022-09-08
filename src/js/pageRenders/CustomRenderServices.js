@@ -4,9 +4,6 @@ import servicesLoader from '../loaders/servicesLoader.js'
 import pageLoader from '../loaders/pageLoader.js'
 import Slideshow from '../slider/Slideshow.js'
 import {
-  filter
-} from '../filter.js'
-import {
   parallaxScroller
 } from '../helperFuncs.js'
 class CustomRendererServices extends Highway.Renderer {
@@ -26,9 +23,6 @@ class CustomRendererServices extends Highway.Renderer {
         new Slideshow(document.querySelector('.slideshow'))
       }
       servicesLoader(parallaxScroller.bind(null, '.header-image'))
-    }
-    if (document.querySelector('.filter')) {
-      filter(document.querySelector('.filter'))
     }
   }
 }

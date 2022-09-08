@@ -26,6 +26,7 @@ import CustomRendererAbout from './pageRenders/CustomRenderAbout'
 import CustomRendererContacts from './pageRenders/CustomRenderContacts'
 import CustomRendererPortfolio from './pageRenders/CustomRenderPortfolio'
 import CustomRendererProduct from './pageRenders/CustomRenderProduct'
+import CustomRendererHandmade from './pageRenders/CustomRenderHandmade.js'
 import Transition from './Transition'
 import SimpleTransition from './SimpleTransition'
 
@@ -48,7 +49,6 @@ window.addEventListener('load', () => {
   textSplit(document.querySelectorAll('.extra-text p'), 'words')
   textSplit(document.querySelectorAll('.def-h2'), 'words')
   navLinksDetect()
-  textSplit(document.querySelectorAll('.extra-text button'), 'words')
 
   langCurrentPage()
 
@@ -62,7 +62,8 @@ const H = new Highway.Core({
     about: CustomRendererAbout,
     contacts: CustomRendererContacts,
     portfolio: CustomRendererPortfolio,
-    product: CustomRendererProduct
+    product: CustomRendererProduct,
+    handmade: CustomRendererHandmade
   },
   transitions: {
     default: Transition,
@@ -90,6 +91,5 @@ H.on('NAVIGATE_END', () => {
 
   textSplit(document.querySelectorAll('.extra-text p'), 'words')
   textSplit(document.querySelectorAll('.def-h2'), 'words')
-  textSplit(document.querySelectorAll('.extra-text button'), 'words')
 
 })

@@ -192,17 +192,14 @@ a
       align-items: center
       flex-direction: column
       width: 100%
-      .def-h2
+      .filter-title
         +roboto-med
         font-size: 22px
         line-height: 100%
         letter-spacing: 0.1em
         text-transform: uppercase
         color: #000000
-        .word
-          display: inline-block
-          transform: translateY(50px)
-          opacity: 0
+        opacity: 0
       .filter-btns
         display: flex
         justify-content: center
@@ -222,6 +219,7 @@ a
           color: $dark-color
           opacity: 0.4
           background-color: transparent
+          opacity: 0
         .stroke-a
           position: relative
           button
@@ -272,6 +270,7 @@ a
       align-items: flex-start
       width: 100%
       margin-top: 22px
+      opacity: 0
       .text-name
         font-size: 30px
         line-height: 100%
@@ -560,6 +559,7 @@ a
       display: flex
       align-items: flex-start
       column-gap: 23px
+      opacity: 0
       .product-header__small-imgs
         display: flex
         flex-direction: column
@@ -574,72 +574,70 @@ a
             display: block
     .product-header__right-block
       +col(8, 12)
-      .product-header__title
-        +roboto
-        font-size: 72px
-        line-height: 130%
-        text-transform: uppercase
-        color: $dark-color
-      .extra-text
-        p
-          width: 100%
-          margin-left: 0
-          margin-right: 0
-      .product-header__category
-        +roboto
-        font-size: 17px
-        line-height: 100%
-        letter-spacing: 0.1em
-        color: #919191
-        margin-top: 12px
-      .product-header__desc
-        +main
-        font-size: 20px
-        line-height: 160%
-        color: #54555C
-        margin-top: 40px
-      .product-header__material
-        +roboto
-        font-size: 24px
-        line-height: 150%
-        color: $dark-color
-        margin-top: 36px
-      .product-header__material-name
-        +main
-        font-size: 20px
-        line-height: 150%
-        color: $dark-color
-        margin-top: 8px
-      .product-header__size
-        +roboto
-        font-size: 24px
-        line-height: 150%
-        color: $dark-color
-        margin-top: 36px
-      .product-header__size-info
-        +main
-        font-size: 20px
-        line-height: 150%
-        color: $dark-color
-        margin-top: 8px
-      .product-header__price
-        +main
-        font-size: 40px
-        line-height: 100%
-        color: $dark-color
-        margin-top: 36px
-        span
-          color: #EB5757
-      .product-header__phone
-        +roboto
-        font-size: 24px
-        line-height: 100%
-        color: $dark-color
-        margin-top: 60px
-        a
-          color: #EB5757
+      .product-header__text-wrapper
+        opacity: 0
+        .product-header__title
+          +roboto
+          font-size: 72px
+          line-height: 130%
+          text-transform: uppercase
+          color: $dark-color
+        .product-header__category
+          +roboto
+          font-size: 17px
+          line-height: 100%
+          letter-spacing: 0.1em
+          color: #919191
+          margin-top: 12px
+        .product-header__desc
+          +main
+          font-size: 20px
+          line-height: 160%
+          color: #54555C
+          margin-top: 40px
+        .product-header__material
+          +roboto
+          font-size: 24px
+          line-height: 150%
+          color: $dark-color
+          margin-top: 36px
+        .product-header__material-name
+          +main
+          font-size: 20px
+          line-height: 150%
+          color: $dark-color
+          margin-top: 8px
+        .product-header__size
+          +roboto
+          font-size: 24px
+          line-height: 150%
+          color: $dark-color
+          margin-top: 36px
+        .product-header__size-info
+          +main
+          font-size: 20px
+          line-height: 150%
+          color: $dark-color
+          margin-top: 8px
+        .product-header__price
+          +main
+          font-size: 40px
+          line-height: 100%
+          color: $dark-color
+          margin-top: 36px
+          span
+            color: #EB5757
+        .product-header__phone
+          +roboto
+          font-size: 24px
+          line-height: 100%
+          color: $dark-color
+          margin-top: 60px
+          a
+            color: #EB5757
       .product-header__form-wrapper
         margin-top: 60px
+        opacity: 0
         .distance
           margin-top: 26px
         .product-header__btn-wrapper

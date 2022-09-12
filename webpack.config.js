@@ -1,6 +1,5 @@
 // const webpack = require('webpack')
 const path = require('path')
-const gulpConfig = require('./gulp/config')
 const EntrypointsPlugin = require('emotion-webpack-entrypoints-plugin')
 // const BundleAnalyzerPlugin =
 // require('webpack-bundle-analyzer').BundleAnalyzerPlugin
@@ -9,7 +8,7 @@ function createConfig(env) {
   const isProduction = env === 'production'
 
   const devName = '[name].js'
-  const buildName = `[name].${gulpConfig.hash}.js`
+  const buildName = '[name].js'
 
   const filename = env === 'production' ? buildName : devName
 

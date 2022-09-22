@@ -1,18 +1,19 @@
 export default class Slider {
-
-  constructor($el, counter = 0) {
+  constructor($el, counter = 0, auto = false) {
     this.$el = $el
     this.$slides = this.$el.querySelectorAll('[data-slide]')
 
     this.counter = counter
     this.previous = null
+    this.isNext = false
     this.length = this.$slides.length
+    this.auto = auto
 
     this.init()
   }
 
   bounds() {
-    ['prev', 'next'].forEach((fn) => {
+    ['prev', 'next', 'to'].forEach((fn) => {
       this[fn] = this[fn].bind(this)
     })
   }
@@ -42,8 +43,18 @@ export default class Slider {
     }
   }
 
+  to(idx = 0) {
+    const dif = idx - this.counter
+    this.isNext = idx > this.counter ? true : false
+
+    console.log(this.isNext)
+
+    this.counter = idx
+    this.previous = idx + -dif
+  }
+
   destroy() {
-    this.$slides.forEach(slide => {
+    this.$slides.forEach((slide) => {
       slide.classList.remove('active')
       slide.style = ''
     })

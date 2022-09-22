@@ -3,15 +3,11 @@ import Highway from '@dogstudio/highway'
 import productLoader from '../loaders/productLoader.js'
 import pageLoader from '../loaders/pageLoader.js'
 import Slideshow from '@/ui/slider/Slideshow'
-import {
-  parallaxScroller
-} from '../helperFuncs.js'
+import {parallaxScroller} from '../helperFuncs.js'
 class CustomRendererProduct extends Highway.Renderer {
   onEnterCompleted() {
     window.addEventListener('load', () => {
-      pageLoader(
-        productLoader
-      )
+      pageLoader(productLoader)
 
       if (document.querySelector('.product__slider')) {
         new Slideshow(document.querySelector('.product__slider'), 0)

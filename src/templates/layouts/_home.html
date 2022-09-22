@@ -9,7 +9,18 @@
     <div class="header__img">
       <div class="header__img__wrapper img-wrapper">
         <div class="header__img__rewealer"></div>
-        <img src="{% if lang %}.{% endif %}./img/header-img.jpg" alt="house">
+        <div class="img-item home__slider" data-slider>
+          <div class="home__slider-wrapper">
+            <div class="home__slides">
+              {% for i in range(0, 3) -%}
+              <div data-slide class="home__slide">
+                <div data-slide-img class="home__slide-img"
+                  style="background-image:url('./img/home-slider/{{i+1}}.jpg')"></div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="header-img-shadow"></div>

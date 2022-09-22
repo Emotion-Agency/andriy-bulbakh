@@ -4,7 +4,7 @@ import {TimelineMax, Power2, Power1, Expo, Sine} from 'gsap'
 const mainLoader = () => {
   const shadow = document.querySelector('.header-img-shadow')
   const imgRewealer = document.querySelector('.header__img__rewealer')
-  const img = document.querySelector('.header__img img')
+  const img = document.querySelector('.header__img .img-item')
   const imgWrapper = document.querySelector('.header__img')
   const descriptor = document.querySelector('.descriptor')
   const h1 = document.querySelector('h1')

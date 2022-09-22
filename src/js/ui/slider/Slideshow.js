@@ -3,11 +3,9 @@ import {Power2, TimelineMax} from 'gsap'
 import Slider from './Slider'
 import Navigation from './Navigation'
 
-
 export default class Slideshow extends Slider {
-
-  constructor($el, counter = 0) {
-    super($el, counter)
+  constructor($el, counter = 0, auto = false) {
+    super($el, counter, auto)
 
     this.$imgs = this.$el.querySelectorAll('[data-slide-img]')
 
@@ -22,9 +20,15 @@ export default class Slideshow extends Slider {
 
   init() {
     super.init()
+    if (this.auto) {
+      this.interval = setInterval(() => {
+        this.next()
+      }, 5000)
+    }
     this.nav = new Navigation(this.$el, {
       prev: this.prev,
-      next: this.next
+      next: this.next,
+      to: this.to,
     })
   }
 
@@ -39,6 +43,13 @@ export default class Slideshow extends Slider {
     if (!this.isAnimating) {
       super.next()
       this.slideAnimation('right')
+    }
+  }
+
+  to(idx) {
+    if (!this.isAnimating) {
+      super.to(idx)
+      this.isNext ? this.slideAnimation('right') : this.slideAnimation('left')
     }
   }
 
@@ -92,10 +103,12 @@ export default class Slideshow extends Slider {
   }
   destroy() {
     super.destroy()
-    this.$imgs.forEach(img => {
+    this.$imgs.forEach((img) => {
       img.style = `
       background-image: ${window.getComputedStyle(img).backgroundImage}`
     })
     this.nav.destroy()
+
+    clearInterval(this.interval)
   }
 }

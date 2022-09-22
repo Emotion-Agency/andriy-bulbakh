@@ -1,7 +1,6 @@
 import swipedetect from '@/lib/swipe'
 
 export default class Navigation {
-
   constructor($el, opts) {
     this.$el = $el
     this.opts = opts
@@ -11,6 +10,7 @@ export default class Navigation {
     this.nav = {
       $left: this.$parent.querySelector('[data-nav="prev"]'),
       $right: this.$parent.querySelector('[data-nav="next"]'),
+      $preview: document.querySelectorAll('[data-slide-preview]'),
     }
 
     this.init()
@@ -24,8 +24,16 @@ export default class Navigation {
   }
 
   click() {
-    this.nav.$left.addEventListener('click', this.opts.prev)
-    this.nav.$right.addEventListener('click', this.opts.next)
+    if (this.nav.$left && this.nav.$right) {
+      this.nav.$left.addEventListener('click', this.opts.prev)
+      this.nav.$right.addEventListener('click', this.opts.next)
+    }
+
+    if (this.nav.$preview) {
+      this.nav.$preview.forEach((el, idx) => {
+        el.addEventListener('click', () => this.opts.to(idx))
+      })
+    }
   }
 
   swipe() {

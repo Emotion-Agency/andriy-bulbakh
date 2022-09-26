@@ -183,70 +183,68 @@ a
   &.left
     left: 1.15vw
 
-.default-item
-  &__content-wrapper
-    width: 100%
-    .filter
-      display: flex
-      justify-content: center
-      align-items: center
-      flex-direction: column
+.filter
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  width: 100%
+  opacity: 0
+.filter-title
+  +roboto-med
+  font-size: 22px
+  line-height: 100%
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  color: #000000
+.filter-btns
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  margin-top: 52px
+  text-align: center
+  column-gap: 60px
+  row-gap: 20px
+  position: relative
+.filter-btn
+  +roboto
+  position: relative
+  font-size: 40px
+  line-height: 100%
+  text-transform: uppercase
+  color: $dark-color
+  opacity: 0.4
+  background-color: transparent
+  transition: opacity 0.3s ease
+  &::after
+    content: ''
+    position: absolute
+    bottom: -5px
+    left: auto
+    right: 0
+    display: block
+    width: 0
+    height: 2px
+    background: $dark-color
+    transition: width .5s ease
+  &.active
+    opacity: 1
+    &::after
+      left: 0
+      right: auto
       width: 100%
-      opacity: 0
-      .filter-title
-        +roboto-med
-        font-size: 22px
-        line-height: 100%
-        letter-spacing: 0.1em
-        text-transform: uppercase
-        color: #000000
-      .filter-btns
-        display: flex
-        justify-content: center
-        align-items: center
-        flex-wrap: wrap
-        margin-top: 52px
-        text-align: center
-        column-gap: 60px
-        row-gap: 20px
-        position: relative
-        .filter-btn
-          +roboto
-          position: relative
-          font-size: 40px
-          line-height: 100%
-          text-transform: uppercase
-          color: $dark-color
-          opacity: 0.4
-          background-color: transparent
-        .stroke-a
-          position: relative
-          button
-            position: relative
-            transition: all 0.3s ease
-            &::after
-              content: ''
-              position: absolute
-              bottom: -5px
-              left: auto
-              right: 0
-              display: block
-              width: 0
-              height: 2px
-              background: $dark-color
-              transition: width .5s ease
-            &.active
-              opacity: 1
-              &::after
-                left: 0
-                right: auto
-                width: 100%
-          &:hover
-            button
-              &::after
-                left: 0
-                right: auto
-                width: 100%
+  &:hover
+    &::after
+      left: 0
+      right: auto
+      width: 100%
+
+.default-item
+  &__container
+    width: 100%
+    &.reverse
+      flex-direction: row-reverse
     .img-list
       display: inline-block
       width: 100%
@@ -287,6 +285,16 @@ a
         letter-spacing: 0.1em
         color: #919191
         width: fit-content
+
+.default-item
+  &__content-wrapper
+    width: 100%
+    display: flex
+    align-items: center
+    &.reverse
+      flex-direction: row-reverse
+    .img-wrapper
+      max-width: 50%
 
 .default-text
   display: flex
@@ -545,7 +553,6 @@ a
     transform: rotate(-180deg)
 
 //======== product page ========
-
 
 .home__slider
   width: 100%

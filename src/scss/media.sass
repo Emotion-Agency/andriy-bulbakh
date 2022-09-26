@@ -10,7 +10,7 @@ $vertical-distance-mob: 80px
 					max-width: 688px
 
 @media (min-width: 960px)
-	.default-item__content-wrapper
+	.default-item__container
 		.img-li
 			margin-top: 160px
 			width: 42%
@@ -251,6 +251,29 @@ $vertical-distance-mob: 80px
 				width: 100%
 	.copyright
 		display: none
+
+	.default-item__container
+		flex-direction: column
+		.filter
+			.filter-title
+				font-size: 18px
+			.filter-btns
+				margin-top: 30px
+				column-gap: 30px
+				.filter-btn
+					font-size: 22px
+		.img-li
+			margin-top: 60px
+			width: 100%
+			.img-wrapper
+				margin-left: 0
+				margin-right: 0
+			.text-wrapper
+				margin-top: 20px
+				.text-name
+					font-size: 18px
+				.text-category
+					font-size: 14px
 
 @media (max-width: 880px)
 	.header

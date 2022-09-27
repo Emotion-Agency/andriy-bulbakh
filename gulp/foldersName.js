@@ -1,4 +1,4 @@
-const projectName = 'emotion'
+const projectName = 'bulbakh'
 
 const foldersName = {
   projectFolder: 'build',

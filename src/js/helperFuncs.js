@@ -2,7 +2,10 @@ import splitting from 'splitting'
 
 export const textSplit = (elems, by) => {
   for (const elem of elems) {
-    splitting({target: elem, by})
+    splitting({
+      target: elem,
+      by
+    })
   }
 }
 
@@ -20,20 +23,20 @@ export const navLinksDetect = () => {
 
 export const langCurrentPage = () => {
   const langBtn = document.querySelector('.lang')
-  const reg = /\/ua/gi
-  let newHref
+  const currentLang = document.querySelector('[data-translate-url]')
 
+  if (!currentLang) {
+    return
+  }
   switch (document.documentElement.lang) {
     case 'uk':
-      newHref = location.pathname.replace(reg, '')
-      langBtn.setAttribute('href', `..${newHref}`)
+      langBtn.setAttribute('href', currentLang.dataset.translateUrl)
       langBtn.setAttribute('hreflang', 'en')
       langBtn.innerText = 'EN'
       break
 
     case 'en':
-      newHref = location.pathname.replace(reg, '')
-      langBtn.setAttribute('href', `./ua${newHref}`)
+      langBtn.setAttribute('href', currentLang.dataset.translateUrl)
       langBtn.setAttribute('hreflang', 'uk')
       langBtn.innerText = 'UA'
       break

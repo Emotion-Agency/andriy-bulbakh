@@ -415,11 +415,39 @@ a
   right: 0
   opacity: 0
 
+.portfolio-header__wrapper
+  display: flex
+  justify-content: center
+  flex-direction: column
+  row-gap: 42px
+  width: 100%
+  height: 100%
+.portfolio-header__desc
+  +roboto
+  font-size: 24px
+  line-height: 150%
+  letter-spacing: 0.1em
+
 .portfolio
   margin-top: size(180, 80)
   margin-bottom: size(100, 60)
   width: 100%
   opacity: 0
+.portfolio__h2
+  +roboto
+  +col(2, 12)
+  color: #292B33
+  letter-spacing: 0.05em
+  font-size: 100px
+  text-transform: uppercase
+  line-height: 1em
+  opacity: 0
+  .word
+    display: inline-block
+  .char
+    opacity: 0
+    transform: translateX(60px)
+    display: inline-block
 .portfolio__items
   margin-top: size(44, 32)
   width: 100%

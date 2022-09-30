@@ -9,6 +9,26 @@ $vertical-distance-mob: 80px
 				p
 					max-width: 688px
 
+	.portfolio-header__wrapper
+		display: grid
+		grid-template-columns: repeat(12, 1fr)
+		column-gap: 20px
+		grid-auto-flow: column
+		align-content: center
+		width: 100%
+		row-gap: 82px
+		height: 100%
+	.portfolio-header__h1
+		+col(2, 12)
+	.portfolio-header__desc
+		+col(2, 8)
+	.portfolit__h2-wrapper
+		display: grid
+		grid-template-columns: repeat(12, 1fr)
+		column-gap: 20px
+		grid-auto-flow: column
+		align-content: center
+
 @media (min-width: 960px)
 	.default-item__container
 		.img-li
@@ -40,6 +60,8 @@ $vertical-distance-mob: 80px
 @media (max-width: 1480px)
 	h1
 		font-size: 75px
+	.portfolio__h2
+		font-size: 75px
 	.contacts-page-wrapper
 		height: auto
 		padding-top: 100px
@@ -53,6 +75,8 @@ $vertical-distance-mob: 80px
 
 @media (max-width: 1260px)
 	h1
+		font-size: 70px
+	.portfolio__h2
 		font-size: 70px
 	// .header
 	// 	&__container
@@ -85,6 +109,8 @@ $vertical-distance-mob: 80px
 		font-size: 36px
 	.default-text p
 		margin-top: 30%
+	.portfolio__h2
+		font-size: 60px
 	.section
 		.container
 			padding-top: 140px
@@ -274,6 +300,8 @@ $vertical-distance-mob: 80px
 					font-size: 18px
 				.text-category
 					font-size: 14px
+	.portfolio-header__desc
+		font-size: 20px
 
 @media (max-width: 880px)
 	.header
@@ -302,6 +330,8 @@ $vertical-distance-mob: 80px
 			&__right-content
 				width: 100%
 	h1
+		font-size: 48px
+	.portfolio__h2
 		font-size: 48px
 
 	.services-h1

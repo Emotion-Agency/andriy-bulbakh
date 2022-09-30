@@ -5,6 +5,7 @@ const portfolioLoader = () => {
   const h1 = document.querySelector('h1')
   const h2 = document.querySelector('.portfolio__h2')
   const content = document.querySelector('.portfolio')
+  const description = document.querySelector('.portfolio-header__desc')
   splitting({target: h1, by: 'chars'})
   splitting({target: h2, by: 'chars'})
   const tl = new TimelineMax()
@@ -25,6 +26,7 @@ const portfolioLoader = () => {
       0.2,
     )
   tl.to(content, 1, {opacity: 1}, 0.2)
+  tl.to(description, 1, {opacity: 1}, 0.6)
 }
 
 export default portfolioLoader

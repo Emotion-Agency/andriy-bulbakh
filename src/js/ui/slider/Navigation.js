@@ -8,8 +8,8 @@ export default class Navigation {
     this.$parent = this.$el.closest('[data-slider]')
 
     this.nav = {
-      $left: this.$parent.querySelector('[data-nav="prev"]'),
-      $right: this.$parent.querySelector('[data-nav="next"]'),
+      $left: document.querySelector('[data-nav="prev"]'),
+      $right: document.querySelector('[data-nav="next"]'),
       $preview: document.querySelectorAll('[data-slide-preview]'),
     }
 

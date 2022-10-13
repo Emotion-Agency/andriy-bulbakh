@@ -85,6 +85,8 @@ $vertical-distance-mob: 80px
 		p
 			font-size: 25px
 			width: 60vw
+	.portfolio-cards__text-wrapper
+		padding: 4%
 
 @media (max-width: 1150px)
 	.header
@@ -194,6 +196,11 @@ $vertical-distance-mob: 80px
 					.product-header__btn-wrapper
 						.product-header__form-btn
 							font-size: 16px
+	.portfolio-cards__title
+		font-size: 30px
+
+	.portfolio-cards__desc
+		font-size: 18px
 
 @media (max-width: 960px)
 	.default-item__content-wrapper
@@ -303,6 +310,29 @@ $vertical-distance-mob: 80px
 	.portfolio-header__desc
 		font-size: 20px
 
+	.portfolio-cards__card
+		flex-direction: column
+		justify-content: center
+		flex-direction: column-reverse
+		margin-top: 100px
+		&:nth-of-type(even)
+			flex-direction: column-reverse
+			.portfolio-cards__text-wrapper
+				padding-right: 0
+		&:nth-of-type(odd)
+			.portfolio-cards__text-wrapper
+				padding: 0
+
+
+	.portfolio-cards__img
+		margin-top: 25px
+		width: 100%
+
+	.portfolio-cards__text-wrapper
+		padding: 0
+		width: 100%
+		gap: 20px
+		
 @media (max-width: 880px)
 	.header
 		&__container

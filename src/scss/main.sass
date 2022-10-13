@@ -434,6 +434,10 @@ a
   margin-bottom: size(250, 60)
   width: 100%
   opacity: 0
+
+.portfolio-header__h1
+  color: #54555C
+
 .portfolio__h2
   +roboto
   +col(2, 12)
@@ -580,6 +584,48 @@ a
   .portfolio__slider-icon
     float: right
     transform: rotate(-180deg)
+
+.portfolio-cards__wrapper
+  width: 100%
+
+.portfolio-cards__card
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 220px
+  width: 100%
+  &:first-of-type
+    margin-top: 0
+  &:nth-of-type(even)
+    flex-direction: row-reverse
+    .portfolio-cards__text-wrapper
+      padding-right: 6.5%
+  &:nth-of-type(odd)
+    .portfolio-cards__text-wrapper
+      padding: 6.5%
+
+    
+.portfolio-cards__img
+  width: 50%
+
+.portfolio-cards__text-wrapper
+  display: flex
+  flex-direction: column
+  row-gap: 52px
+  width: 50%
+
+.portfolio-cards__title
+  +roboto
+  font-size: 60px
+  line-height: 130%
+  letter-spacing: 0.05em
+  color: #292B33
+
+.portfolio-cards__desc
+  +main
+  font-size: 24px
+  line-height: 170%
+  color: #54555C
 
 //======== product page ========
 

@@ -1,17 +1,12 @@
 import Highway from '@dogstudio/highway'
 
-import {
-  textSplit,
-  navLinksDetect,
-  langCurrentPage
-} from './helperFuncs.js'
+import {textSplit, navLinksDetect, langCurrentPage} from './helperFuncs.js'
 
 import Nav from './ui/nav/nav.js'
 import FormSubmit from './form/FormSubmit.js'
 import ScrollAnimation from './scroll.js'
 import webP from './lib/testWebP'
 // import imgsOptimizer from './mobileImgs.js'
-
 
 import './loaders/loader.js'
 import './ui/nav/navbarScrolling.js'
@@ -29,7 +24,6 @@ import CustomRendererProduct from './pageRenders/CustomRenderProduct'
 import CustomRendererHandmade from './pageRenders/CustomRenderHandmade.js'
 import Transition from './Transition'
 import SimpleTransition from './SimpleTransition'
-
 
 window.addEventListener('beforeunload', () => {
   window.scrollTo(0, 0)
@@ -51,9 +45,7 @@ window.addEventListener('load', () => {
   navLinksDetect()
 
   langCurrentPage()
-
 })
-
 
 const H = new Highway.Core({
   renderers: {
@@ -63,16 +55,15 @@ const H = new Highway.Core({
     contacts: CustomRendererContacts,
     portfolio: CustomRendererPortfolio,
     product: CustomRendererProduct,
-    handmade: CustomRendererHandmade
+    handmade: CustomRendererHandmade,
   },
   transitions: {
     default: Transition,
     contextual: {
-      simple: SimpleTransition
-    }
-  }
+      simple: SimpleTransition,
+    },
+  },
 })
-
 
 H.on('NAVIGATE_IN', () => {
   navLinksDetect()
@@ -82,6 +73,7 @@ H.on('NAVIGATE_IN', () => {
 H.on('NAVIGATE_END', () => {
   // imgsOptimizer()
   navLinksDetect()
+  langCurrentPage()
 
   webP()
 
@@ -93,5 +85,4 @@ H.on('NAVIGATE_END', () => {
 
   textSplit(document.querySelectorAll('.extra-text p'), 'words')
   textSplit(document.querySelectorAll('.def-h2'), 'words')
-
 })

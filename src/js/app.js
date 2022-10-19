@@ -81,6 +81,8 @@ H.on('NAVIGATE_IN', () => {
 
 H.on('NAVIGATE_END', () => {
   // imgsOptimizer()
+  navLinksDetect()
+
   webP()
 
   setTimeout(() => new ScrollAnimation(), 500)
